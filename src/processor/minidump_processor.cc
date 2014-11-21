@@ -44,6 +44,10 @@
 #include "processor/logging.h"
 #include "processor/stackwalker_x86.h"
 
+#ifdef _MSC_VER
+#define snprintf _snprintf
+#endif
+
 namespace google_breakpad {
 
 MinidumpProcessor::MinidumpProcessor(SymbolSupplier *supplier,
